@@ -5,6 +5,8 @@ package quotes;
 
 import org.junit.jupiter.api.Test;
 
+import java.io.File;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 class AppTest {
@@ -17,6 +19,12 @@ class AppTest {
     @Test
     void test() {
         QuotesClass quotesClass = new QuotesClass();
-        quotesClass.quotes("/mnt/c/Users/M.2070/MyWork/quotes/app/src/main/resources/Data.json");
+        // i use the windows operating system and i think you use the linux operating system  then please use any path for u system .
+        String LinuxPath = "/mnt/c/Users/M.2070/MyWork/quotes/app/src/main/resources/Data.json";
+        String path = "./Data.json";
+        Book result=  quotesClass.quotes(LinuxPath);
+        assertNotNull(result);
     }
+
+
 }

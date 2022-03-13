@@ -10,7 +10,7 @@ import java.util.Random;
 
 public class QuotesClass {
 
-    public void quotes(String path) {
+    public Book quotes(String path) {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         String t = classLoader.getResource("Data.json").toString();
         String InputPath = t.replace("file:/C", "C");
@@ -32,7 +32,6 @@ public class QuotesClass {
             e.printStackTrace();
         }
         String[] test = readline.split("},");
-        for (int index = 0; index < 4; index++) {
             Random random = new Random();
             int randonInteger = random.nextInt(138);
             if (randonInteger < test.length) {
@@ -40,11 +39,12 @@ public class QuotesClass {
                 Gson gson = new Gson();
                 Book out = gson.fromJson(p, Book.class);
                 System.out.println(out);
-            }
+                return out;
         }
+            return null;
     }
 
-    public void quotes() {
+    public Book quotes() {
         ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
         String t = classLoader.getResource("Data.json").toString();
         String InputPath = t.replace("file:/C", "C");
@@ -62,13 +62,12 @@ public class QuotesClass {
             e.printStackTrace();
         }
         String[] test = readline.split("},");
-        for (int index = 0; index < 4; index++) {
             Random random = new Random();
             int randonInteger = random.nextInt(138);
             String p = test[randonInteger].replace("text", "quotes") + "}";
             Gson gson = new Gson();
             Book out = gson.fromJson(p, Book.class);
             System.out.println(out);
-        }
+            return out;
     }
 }

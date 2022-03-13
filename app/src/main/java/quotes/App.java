@@ -19,10 +19,11 @@ public class App {
 
     public static void main(String[] args) {
         QuotesClass quotesClass = new QuotesClass();
-        quotesClass.quotes();
+         quotesClass.quotes();
+
+
     }
 
 
 
 }
-///mnt/c/Users/M.2070/MyWork/quotes/app/src/main/resources
