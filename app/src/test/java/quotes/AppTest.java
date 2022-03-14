@@ -6,6 +6,12 @@ package quotes;
 import org.junit.jupiter.api.Test;
 
 import java.io.File;
+import java.io.FileReader;
+import java.io.IOException;
+import java.io.Reader;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -17,13 +23,10 @@ class AppTest {
     }
 
     @Test
-    void test() {
-        QuotesClass quotesClass = new QuotesClass();
-        // i use the windows operating system and i think you use the linux operating system  then please use any path for u system .
-        String LinuxPath = "/mnt/c/Users/M.2070/MyWork/quotes/app/src/main/resources/Data.json";
-        String path = "./Data.json";
-        Book result=  quotesClass.quotes(LinuxPath);
-        assertNotNull(result);
+    void test() throws IOException {
+        // if the internet connection is work
+        APIQuotes test = new APIQuotes();
+        assertNotNull(test.quotesForTEST1());
     }
 
 

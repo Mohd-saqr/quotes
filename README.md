@@ -26,3 +26,34 @@ Book{author='办�?�明尼�?达大学�?�城分校毕业�?[学历认�
 Book{author='Nayyirah Waheed', quotes='as you are.’ says the universe. ‘after…’ you answer. ‘as you are.’ says the universe. ‘before…’ you answer. ‘as you are.’ says the universe. ‘when…’ you answer. ‘as you are.’ says the universe. ‘how…’ you answer. ‘as you are.’ says the universe. ‘why…’ you answer. ‘because you are happening now. right now. right at this moment and your happening is beautiful. the thing that both keeps me alive and brings me to my knees. you don’t even know how breathtaking you are. as you are.’ says the universe through tears. — as you are | you are the prayer'}
 ````
 
+## Edit for class 9 
+
+## Description method
+the method it get a random quotes from API and write this quotes in Data.json file 
+if the connection is cut the will get the random quotes from data.json 
+
+## How you use my code
+
+gradle uses in my project
+``
+implementation 'com.google.code.gson:gson:2.9.0'
+implementation 'com.google.code.gson:gson:2.9.0'
+implementation 'com.github.cliftonlabs:json-simple:3.1.0'
+
+``
+
+second we can use  call the method in main method of your app
+
+such as
+
+````
+APIQuotes test = new APIQuotes(); test.quotes();  // create object 
+
+ test.quotes(); we can see in thrminal after run the app 
+RandomQuotes{author='Chloe Salinas', quotes=' Never half-ass two things. Whole-ass one thing. '}
+
+````
+
+## notes : in class Quotes class it contain all method 
+
+

@@ -3,27 +3,21 @@
  */
 package quotes;
 
-import com.google.gson.Gson;
+import com.github.cliftonlabs.json_simple.JsonException;
 
 import java.io.*;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
-import java.util.Scanner;
-
 
 public class App {
     public String getGreeting() {
         return "Hello World!";
     }
 
-    public static void main(String[] args) {
-        QuotesClass quotesClass = new QuotesClass();
-         quotesClass.quotes();
+    public static void main(String[] args) throws IOException, JsonException {
+        APIQuotes test = new APIQuotes();
+        test.quotes();
 
 
     }
-
 
 
 }
